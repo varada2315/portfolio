@@ -11,72 +11,41 @@ export default function Home() {
   useLenis();
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 pb-12">
       
-      {/* Sticky Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <motion.div 
-            className="flex items-center gap-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <div className="w-6 h-6 bg-gradient-to-br from-primary to-secondary rounded-lg shadow-lg shadow-primary/50" />
-            <span className="font-display font-bold text-lg tracking-tight glow-text">VARADA</span>
-          </motion.div>
+      {/* Friendly Navbar */}
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
+        <div className="bg-white/60 backdrop-blur-xl border border-white/40 shadow-soft rounded-full px-8 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-primary rounded-xl shadow-lg -rotate-12 flex items-center justify-center text-white font-bold">V</div>
+            <span className="font-display font-bold text-lg tracking-tight">VARADA</span>
+          </div>
           
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#" className="hover:text-primary transition-colors">Home</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+          <div className="hidden md:flex items-center gap-8 text-sm font-semibold opacity-70">
+            <a href="#" className="hover:text-primary hover:opacity-100 transition-all">Home</a>
+            <a href="#projects" className="hover:text-primary hover:opacity-100 transition-all">Projects</a>
+            <a href="#about" className="hover:text-primary hover:opacity-100 transition-all">About</a>
+            <a href="#contact" className="hover:text-primary hover:opacity-100 transition-all">Contact</a>
           </div>
         </div>
       </nav>
 
-      {/* Side Label */}
-      <motion.div 
-        className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-4 text-xs font-mono text-muted-foreground tracking-widest uppercase"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-      >
-        <div className="h-20 w-0.5 bg-gradient-to-b from-transparent via-primary/50 to-transparent"></div>
-        <div className="writing-mode-vertical text-center whitespace-nowrap text-primary/60 hover:text-primary transition-colors cursor-default">
-          A Product is Not Built
-        </div>
-        <div className="writing-mode-vertical text-center whitespace-nowrap glow-text">
-          It is Assembled
-        </div>
-        <div className="h-20 w-0.5 bg-gradient-to-t from-transparent via-primary/50 to-transparent"></div>
-      </motion.div>
-
-      <main className="container mx-auto px-4 pt-24 pb-12">
+      <main className="container mx-auto px-4 pt-32 max-w-6xl">
         <Hero />
-        <div id="about" className="scroll-mt-24">
-          <About />
-        </div>
+        <About />
         <Skills />
-        <div id="projects" className="scroll-mt-24">
-          <Projects />
-        </div>
+        <Projects />
         <Experience />
-        <div id="contact" className="scroll-mt-24">
-          <Contact />
-        </div>
+        <Contact />
       </main>
 
-      <footer className="border-t border-primary/20 py-8 bg-card/50">
-        <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            © 2026 Varada Kumbhar. Built with Block Architecture & Assembled with ❤️
-          </motion.p>
+      <footer className="mt-12 py-12 text-center text-muted-foreground">
+        <div className="flex justify-center gap-2 mb-4">
+          <div className="w-4 h-4 rounded bg-primary/20" />
+          <div className="w-4 h-4 rounded bg-secondary/20" />
+          <div className="w-4 h-4 rounded bg-accent/20" />
         </div>
+        <p className="text-sm font-medium">Assembled with care • Varada Kumbhar 2026</p>
       </footer>
     </div>
   );

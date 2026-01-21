@@ -7,7 +7,7 @@ import { Experience } from "@/components/sections/experience";
 import { Contact } from "@/components/sections/contact";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
-import logoUrl from '@assets/generated_images/cartoon-builder-girl-logo-illustration_1769006934844.png';
+import logoUrl from '@assets/generated_images/cartoon_builder_girl_logo_illustration.png';
 
 export default function Home() {
   useLenis();

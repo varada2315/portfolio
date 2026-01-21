@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "Cyaphire AI",
-    category: "Automation",
+    category: "Product Case Study",
     icon: <Rocket className="w-10 h-10" />,
     link: "https://www.notion.so/Cyaphire-AI-Deployment-Automation-Platform-2ef615dccdb48062930bc75a2a05bc09",
     variant: "teal" as const

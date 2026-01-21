@@ -7,23 +7,37 @@ import { Experience } from "@/components/sections/experience";
 import { Contact } from "@/components/sections/contact";
 import { BuilderLogo } from "@/components/ui/builder-logo";
 import { motion } from "framer-motion";
-import techGirlLogoImg from "@assets/generated_images/sleek_tech_girl_avatar_glassmorphism.png";
 import headerLogoImg from "@assets/Untitled_design_(8)_1769012998999.png";
 
 export default function Home() {
   useLenis();
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 pb-12 overflow-x-hidden">
-      
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 pb-12 overflow-x-hidden relative">
+      {/* Tech Doodles Background */}
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03] dark:opacity-[0.05]">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="doodles" x="0" y="0" width="200" height="200" patternUnits="userSpaceOn some">
+              <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <circle cx="80" cy="50" r="5" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <path d="M120 30 Q 140 10 160 30" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <path d="M30 120 L50 140 M50 120 L30 140" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <rect x="150" y="150" width="20" height="10" rx="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <path d="M100 100 L110 110 L100 120" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <circle cx="180" cy="80" r="3" fill="currentColor"/>
+              <path d="M50 180 C 70 180 70 160 90 160" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#doodles)" />
+        </svg>
+      </div>
+
       {/* Modern Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white/70 backdrop-blur-xl">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <BuilderLogo src={headerLogoImg} />
-              <BuilderLogo src={techGirlLogoImg} />
-            </div>
+            <BuilderLogo src={headerLogoImg} />
             <div className="flex flex-col">
               <span className="font-display font-black text-xl tracking-tighter text-foreground">VARADA</span>
               <span className="text-[10px] font-bold tracking-widest uppercase text-primary -mt-1">Product Developer</span>

@@ -26,7 +26,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
             >
               Varada <br />
-              <span className="text-primary">Kumbhar</span>
+              <span className="text-primary underline decoration-border/30 decoration-8 underline-offset-8">Kumbhar</span>
             </motion.h1>
           </div>
 
@@ -36,7 +36,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            I assemble digital experiences piece by piece, focusing on 
+            I assemble digital experiences <span className="text-primary font-black">piece by piece</span>, focusing on 
             <span className="text-foreground font-bold"> strategy, operations, and analysis.</span>
           </motion.p>
 
@@ -46,34 +46,34 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Button size="lg" className="rounded-full h-14 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold shadow-xl shadow-primary/20" asChild>
+            <Button size="lg" className="building-block h-14 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold" asChild>
               <a href="#projects">
                 See My Work <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full h-14 px-8 border-2 border-primary/20 font-bold hover:bg-primary/5" asChild>
+            <Button size="lg" variant="outline" className="building-block h-14 px-8 border-2 border-primary/20 font-bold hover:bg-primary/5" asChild>
               <a href="/resume.pdf" download>Download CV</a>
             </Button>
           </motion.div>
         </div>
 
-        <div className="lg:col-span-4 grid grid-cols-1 gap-4">
-          <Block title="Focus" className="p-8">
+        <div className="lg:col-span-4 grid grid-cols-1 gap-6">
+          <Block title="Focus" className="building-block p-8">
             <div className="space-y-4">
               {['Requirement Analysis', 'Product Documentation', 'Workflow Optimization'].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary/40" />
+                  <div className="w-2 h-2 bg-primary/40" />
                   <span className="text-sm font-medium opacity-80">{item}</span>
                 </div>
               ))}
             </div>
           </Block>
           <div className="grid grid-cols-2 gap-4">
-            <Block className="p-4 text-center" variant="primary">
+            <Block className="building-block p-4 text-center" variant="primary">
                <span className="text-2xl font-black">2026</span>
                <p className="text-[10px] font-bold opacity-40 uppercase">B.Tech ENTC</p>
             </Block>
-            <Block className="p-4 text-center" variant="secondary">
+            <Block className="building-block p-4 text-center" variant="secondary">
                <span className="text-2xl font-black">Active</span>
                <p className="text-[10px] font-bold opacity-40 uppercase">Podcast Host</p>
             </Block>

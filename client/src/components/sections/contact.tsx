@@ -39,18 +39,18 @@ export function Contact() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4 space-y-4">
-          <Block className="p-10 h-full border-2" variant="primary">
+          <Block className="building-block p-10 h-full border-2" variant="primary">
             <h3 className="text-3xl font-bold mb-8 tracking-tight">Connect</h3>
             <div className="space-y-4">
-              <a href="mailto:varadakumbhar2004@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white hover:shadow-md transition-all font-bold text-xs uppercase tracking-widest">
+              <a href="mailto:varadakumbhar2004@gmail.com" className="flex items-center gap-4 p-4 bg-white border-2 border-border hover:translate-x-1 hover:translate-y-1 transition-all font-bold text-xs uppercase tracking-widest">
                 <Mail className="w-5 h-5 text-primary" />
                 <span>Email</span>
               </a>
-              <a href="https://www.linkedin.com/in/k-varada-854b69280/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-white hover:shadow-md transition-all font-bold text-xs uppercase tracking-widest">
+              <a href="https://www.linkedin.com/in/k-varada-854b69280/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white border-2 border-border hover:translate-x-1 hover:translate-y-1 transition-all font-bold text-xs uppercase tracking-widest">
                 <Linkedin className="w-5 h-5 text-blue-500" />
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/varada2315" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-white hover:shadow-md transition-all font-bold text-xs uppercase tracking-widest">
+              <a href="https://github.com/varada2315" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white border-2 border-border hover:translate-x-1 hover:translate-y-1 transition-all font-bold text-xs uppercase tracking-widest">
                 <Github className="w-5 h-5 text-slate-800" />
                 <span>GitHub</span>
               </a>
@@ -59,7 +59,7 @@ export function Contact() {
         </div>
 
         <div className="lg:col-span-8">
-          <Block className="p-12" variant="default" bounce={false}>
+          <Block className="building-block p-12" variant="default" bounce={false}>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -69,7 +69,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-[10px] font-bold uppercase tracking-widest opacity-40">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your@email.com" {...field} className="h-14 rounded-2xl border-2 border-border bg-background px-6 font-bold" />
+                        <Input placeholder="your@email.com" {...field} className="h-14 border-2 border-border bg-background px-6 font-bold focus:ring-primary" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -82,13 +82,13 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-[10px] font-bold uppercase tracking-widest opacity-40">Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="How can I help you today?" className="min-h-[150px] rounded-2xl border-2 border-border bg-background p-6 font-bold" {...field} />
+                        <Textarea placeholder="How can I help you today?" className="min-h-[150px] border-2 border-border bg-background p-6 font-bold focus:ring-primary" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full h-16 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold shadow-xl shadow-primary/20 transition-all">
+                <Button type="submit" size="lg" className="building-block w-full h-16 bg-primary hover:bg-primary/90 text-primary-foreground font-bold transition-all">
                   Send Message <Send className="ml-2 w-5 h-5" />
                 </Button>
               </form>

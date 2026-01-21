@@ -6,7 +6,7 @@ export function About() {
     <div id="about" className="mb-32 scroll-mt-32">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-8">
-          <Block title="Biography" className="h-full p-12">
+          <Block title="Biography" className="building-block h-full p-12">
             <h2 className="text-4xl font-bold mb-8 tracking-tight">Crafting Products with Purpose ✨</h2>
             <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
               <p>
@@ -20,16 +20,16 @@ export function About() {
         </div>
 
         <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-4">
-          <Block variant="primary" delay={1} className="p-8">
-            <div className="p-4 bg-primary/10 rounded-2xl w-fit mb-4">
+          <Block variant="primary" delay={1} className="building-block p-8">
+            <div className="p-4 bg-primary/10 w-fit mb-4">
               <Mic className="w-6 h-6 text-primary" />
             </div>
             <h4 className="font-bold text-sm">Podcast Host</h4>
             <p className="text-xs opacity-60">The Speakopedia</p>
           </Block>
           
-          <Block variant="secondary" delay={2} className="p-8">
-            <div className="p-4 bg-secondary/10 rounded-2xl w-fit mb-4">
+          <Block variant="secondary" delay={2} className="building-block p-8">
+            <div className="p-4 bg-secondary/10 w-fit mb-4">
               <Code className="w-6 h-6 text-secondary" />
             </div>
             <h4 className="font-bold text-sm">Tech Operations</h4>

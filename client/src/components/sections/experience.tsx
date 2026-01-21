@@ -11,8 +11,8 @@ export function Experience() {
             <div className="flex-1 h-px bg-border" />
           </div>
 
-          <div className="space-y-4">
-            <Block className="p-10 border-l-8 border-primary">
+          <div className="space-y-6">
+            <Block className="building-block p-10 border-l-[12px] border-primary">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-2xl font-bold">Product Manager Intern</h3>
                 <span className="text-[10px] font-bold opacity-40">DEPLOID X</span>
@@ -22,7 +22,7 @@ export function Experience() {
               </p>
             </Block>
 
-            <Block className="p-10 border-l-8 border-secondary">
+            <Block className="building-block p-10 border-l-[12px] border-secondary">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-2xl font-bold">Developer & Project Intern</h3>
                 <span className="text-[10px] font-bold opacity-40">ASD INDIA SERVICES</span>
@@ -40,8 +40,8 @@ export function Experience() {
             <div className="flex-1 h-px bg-border" />
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
-            <Block variant="primary" className="p-8 group">
+          <div className="grid grid-cols-1 gap-6">
+            <Block variant="primary" className="building-block p-8 group">
               <div className="flex items-center gap-4">
                 <Trophy className="w-6 h-6 text-primary" />
                 <div>
@@ -51,7 +51,7 @@ export function Experience() {
               </div>
             </Block>
 
-            <Block variant="secondary" className="p-8 group">
+            <Block variant="secondary" className="building-block p-8 group">
               <div className="flex items-center gap-4">
                 <Star className="w-6 h-6 text-secondary" />
                 <div>
@@ -61,7 +61,7 @@ export function Experience() {
               </div>
             </Block>
 
-            <Block variant="accent" className="p-8 group">
+            <Block variant="accent" className="building-block p-8 group">
               <div className="flex items-center gap-4">
                 <Award className="w-6 h-6 text-accent" />
                 <div>

@@ -31,16 +31,16 @@ export function Block({
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: delay * 0.1 }}
       className={cn(
-        "tech-card p-6 group",
+        "tech-card p-6 group transition-all duration-300",
         accentColors[variant],
         className
       )}
     >
       {/* Corner Brackets */}
-      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary/40 group-hover:border-primary transition-colors" />
-      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary/40 group-hover:border-primary transition-colors" />
-      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary/40 group-hover:border-primary transition-colors" />
-      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary/40 group-hover:border-primary transition-colors" />
+      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
+      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
+      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
+      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
 
       {title && (
         <div className="mb-4 flex items-center justify-between">

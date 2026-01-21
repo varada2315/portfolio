@@ -8,6 +8,7 @@ interface BlockProps {
   delay?: number;
   title?: string;
   variant?: 'default' | 'primary' | 'secondary' | 'accent';
+  bounce?: boolean;
 }
 
 export function Block({ 
@@ -15,51 +16,41 @@ export function Block({
   className, 
   delay = 0, 
   title, 
-  variant = 'default'
+  variant = 'default',
+  bounce = true
 }: BlockProps) {
-  const accentColors = {
-    default: "border-border",
-    primary: "border-primary/50",
-    secondary: "border-secondary/50",
-    accent: "border-accent/50"
+  const variants = {
+    default: "bg-white border-border shadow-sm",
+    primary: "bg-primary/5 border-primary/20 shadow-sm",
+    secondary: "bg-secondary/5 border-secondary/20 shadow-sm",
+    accent: "bg-accent/20 border-accent/30 shadow-sm"
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: delay * 0.1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: delay * 0.1 }}
+      whileHover={bounce ? { y: -5 } : {}}
       className={cn(
-        "tech-card p-6 group transition-all duration-300",
-        accentColors[variant],
+        "rounded-2xl border p-6 flex flex-col relative overflow-hidden transition-all duration-300",
+        variants[variant],
         className
       )}
     >
-      {/* Corner Brackets */}
-      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
-      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
-      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
-      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary/40 group-hover:border-primary group-hover:shadow-[0_0_8px_hsl(var(--primary))] transition-all" />
-
       {title && (
-        <div className="mb-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-            <h3 className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-primary/80">
-              {title}
-            </h3>
-          </div>
-          <div className="text-[8px] font-mono text-muted-foreground opacity-40">0x{delay + 1}f</div>
+        <div className="mb-4 flex items-center gap-2">
+          <div className="w-1 h-4 rounded-full bg-primary" />
+          <h3 className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground">
+            {title}
+          </h3>
         </div>
       )}
       
       <div className="flex-1 relative z-10">
         {children}
       </div>
-
-      {/* Subtle Scanline Effect */}
-      <div className="scanline" />
     </motion.div>
   );
 }

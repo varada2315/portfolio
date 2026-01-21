@@ -1,51 +1,39 @@
 import { Block } from "@/components/ui/block";
-import { Terminal, Code2, Globe2 } from "lucide-react";
+import { Mic, Code, Lightbulb, Users } from "lucide-react";
 
 export function About() {
   return (
     <div id="about" className="mb-32 scroll-mt-32">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <div className="md:col-span-8">
-          <Block title="Core Repository" className="h-full p-12">
-            <div className="flex items-center gap-4 mb-8">
-              <Terminal className="w-8 h-8 text-primary" />
-              <h2 className="text-4xl font-black tracking-tight uppercase">Biography</h2>
-            </div>
-            <div className="space-y-6 text-lg font-mono text-muted-foreground">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-8">
+          <Block title="Biography" className="h-full p-12">
+            <h2 className="text-4xl font-bold mb-8 tracking-tight">Crafting Products with Purpose ✨</h2>
+            <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
               <p>
-                [ <span className="text-primary font-bold">STATUS:</span> ACTIVE ] <br />
-                B.Tech ENTC student (2022–2026).
+                I am a <span className="text-primary font-bold">B.Tech ENTC student (2022–2026)</span> with a passion for building structured, efficient, and user-centric products.
               </p>
               <p>
-                Specializing in <span className="text-white font-bold">Product Development</span> and <span className="text-white font-bold">Business Analysis</span>. I treat software assembly like a high-stakes puzzle, ensuring every block is optimized for performance.
+                I specialize in <span className="text-foreground font-bold underline decoration-primary/30 decoration-4 underline-offset-4">Product Operations</span> and <span className="text-foreground font-bold underline decoration-primary/30 decoration-4 underline-offset-4">Business Analysis</span>. I believe every great product is built one solid block at a time.
               </p>
-              <div className="p-4 bg-white/5 border border-white/10 rounded font-mono text-sm">
-                $ grep -r "motivation" ./brain <br />
-                &gt; "Continuous learning. Structured thinking. Problem solving."
-              </div>
             </div>
           </Block>
         </div>
 
-        <div className="md:col-span-4 space-y-6">
-          <Block variant="primary" delay={1} title="Communications">
-            <div className="space-y-4">
-              <div className="h-10 w-10 bg-primary/10 rounded flex items-center justify-center">
-                 <Globe2 className="w-6 h-6 text-primary" />
-              </div>
-              <p className="text-xs font-mono uppercase tracking-widest font-bold">The Speakopedia</p>
-              <p className="text-[10px] opacity-40 uppercase">Podcast Host & Creator</p>
+        <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-4">
+          <Block variant="primary" delay={1} className="p-8">
+            <div className="p-4 bg-primary/10 rounded-2xl w-fit mb-4">
+              <Mic className="w-6 h-6 text-primary" />
             </div>
+            <h4 className="font-bold text-sm">Podcast Host</h4>
+            <p className="text-xs opacity-60">The Speakopedia</p>
           </Block>
           
-          <Block variant="secondary" delay={2} title="Toolchain">
-            <div className="space-y-4">
-              <div className="h-10 w-10 bg-secondary/10 rounded flex items-center justify-center">
-                 <Code2 className="w-6 h-6 text-secondary" />
-              </div>
-              <p className="text-xs font-mono uppercase tracking-widest font-bold">Analysis Spec</p>
-              <p className="text-[10px] opacity-40 uppercase">Workflow Optimization</p>
+          <Block variant="secondary" delay={2} className="p-8">
+            <div className="p-4 bg-secondary/10 rounded-2xl w-fit mb-4">
+              <Code className="w-6 h-6 text-secondary" />
             </div>
+            <h4 className="font-bold text-sm">Tech Operations</h4>
+            <p className="text-xs opacity-60">Analysis Specialist</p>
           </Block>
         </div>
       </div>

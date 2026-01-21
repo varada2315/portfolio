@@ -1,0 +1,216 @@
+Theme: Building Blocks of a Product
+
+Prompt:
+
+Create a responsive personal portfolio website for Varada Kumbhar using a unique
+“Building Blocks of a Product” theme.
+
+Concept:
+A Product Manager is like an architect who places each block correctly to build a successful product.
+Each section of the website should appear as a modular tech block representing a product component.
+
+Design should be:
+
+Professional
+
+Minimal
+
+Tech-inspired
+
+Grid based
+
+Subtle shadows
+
+Corporate feel
+
+Avoid flashy colors or cartoons.
+
+🏗 STRUCTURE
+HERO BLOCK
+
+Varada Kumbhar
+Product Operations | Business Analyst | Project Coordinator
+
+CTA Blocks:
+
+View My Work
+
+Download Resume
+
+ABOUT BLOCK
+
+B.Tech ENTC student (2022–2026)
+
+Fresher in Product Operations & Business Analysis
+
+Strong in requirement gathering, documentation & workflow analysis
+
+Podcast host – The Speakopedia
+
+Passion for tech & continuous learning
+
+SKILLS – TECH BLOCK GRID
+
+Create separate blocks for each category:
+
+🧩 Product & Business Analysis
+
+PRDs
+
+User Stories
+
+Product Documentation
+
+Requirement Analysis
+
+Product Testing
+
+User Workflow Analysis
+
+⚙ Project & Operations
+
+Task Management
+
+Stakeholder Communication
+
+Timeline Tracking
+
+Reporting
+
+Process Optimization
+
+Cross-functional collaboration
+
+💻 Technical Skills
+
+Python
+
+SQL
+
+Git
+
+Linux
+
+APIs (basic)
+
+Networking
+
+CI/CD fundamentals
+
+Cloud basics
+
+🛠 Tools
+
+Jira
+
+Notion
+
+Figma (basic)
+
+Asana
+
+Trello
+
+MS Excel (Pivot, VLOOKUP)
+
+🤝 Soft Skills
+
+Communication
+
+Structured thinking
+
+Problem-solving
+
+Leadership
+
+Public speaking
+
+PROJECT BUILDING ZONE
+
+Each project is a stackable tech block:
+
+User Funnel Analysis – Data Analysis
+https://www.notion.so/User-Funnel-Analysis-Beginner-Project-2ef615dccdb4800e9c26df479063ee65
+
+Cyaphire – AI Deployment Automation
+https://www.notion.so/Cyaphire-AI-Deployment-Automation-Platform-2ef615dccdb48062930bc75a2a05bc09
+
+Website Development – Growitate
+https://www.notion.so/Website-Development-at-Growitate-2ef615dccdb480a89476d80c463d5005
+
+Product Analyst Review – Growitate
+https://productvise.blogspot.com/2026/01/growitate-web-builder-changing-e.html
+
+Virtual Chess Board
+https://github.com/varada2315/chess_engine.git
+
+Secure Document Signing
+https://github.com/varada2315/secure-doc-sign.git
+
+Network Traffic Analysis
+https://github.com/varada2315/network_traffic.git
+
+Each block shows:
+
+Category
+
+Short summary
+
+“View Project” button
+
+EXPERIENCE BLOCK
+
+Product Manager Intern – Deploid X
+
+Developer & Project Intern – ASD India Services
+
+ACHIEVEMENTS BLOCK
+
+Research Paper
+
+Title
+
+Journal
+
+Year
+
+Certifications
+
+Podcast host – The Speakopedia
+
+CONTACT BLOCK
+
+Email
+
+LinkedIn
+
+GitHub
+
+Contact form
+
+🎨 DESIGN RULES
+
+Fully responsive
+
+Modular block UI
+
+Subtle hover effects
+
+Smooth scroll
+
+Sticky navbar
+
+Soft professional colors
+
+Fast load
+
+EXTRA
+
+Soft connector lines between blocks
+
+Section title:
+“Building My Product Career – One Block at a Time”
+
+OUTPUT
+
+Generate full production-ready HTML, CSS & JS (or React).

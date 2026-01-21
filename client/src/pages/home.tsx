@@ -8,6 +8,7 @@ import { Contact } from "@/components/sections/contact";
 import { BuilderLogo } from "@/components/ui/builder-logo";
 import { motion } from "framer-motion";
 import techGirlLogoImg from "@assets/generated_images/sleek_tech_girl_avatar_glassmorphism.png";
+import headerLogoImg from "@assets/Untitled_design_(8)_1769012998999.png";
 
 export default function Home() {
   useLenis();
@@ -19,7 +20,10 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white/70 backdrop-blur-xl">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <BuilderLogo src={techGirlLogoImg} />
+            <div className="flex items-center gap-2">
+              <BuilderLogo src={headerLogoImg} />
+              <BuilderLogo src={techGirlLogoImg} />
+            </div>
             <div className="flex flex-col">
               <span className="font-display font-black text-xl tracking-tighter text-foreground">VARADA</span>
               <span className="text-[10px] font-bold tracking-widest uppercase text-primary -mt-1">Product Developer</span>

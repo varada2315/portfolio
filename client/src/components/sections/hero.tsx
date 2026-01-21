@@ -8,7 +8,43 @@ export function Hero() {
     <div className="relative mb-32 pt-10">
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-full h-96 bg-primary/5 blur-[120px] pointer-events-none" />
       
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      {/* Tech Doodles Hero Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <svg 
+          className="absolute -right-20 -top-10 w-[500px] h-[500px] opacity-[0.05] text-primary animate-pulse" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M40,40 L60,40 L60,60 L40,60 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M100,20 L120,20 M110,10 L110,30" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="150" cy="60" r="10" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M20,100 Q40,80 60,100 T100,100" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="140" y="120" width="30" height="20" rx="4" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M80,150 L100,170 M100,150 L80,170" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M10,150 C30,150 30,130 50,130" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="170" cy="180" r="4" fill="currentColor" />
+          {/* Connecting lines */}
+          <path d="M60,50 L140,60" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 2" />
+          <path d="M100,100 L140,130" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 2" />
+        </svg>
+
+        <svg 
+          className="absolute -left-20 bottom-0 w-[400px] h-[400px] opacity-[0.05] text-primary" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="40" cy="40" r="15" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M80,30 L110,30 L110,60 L80,60 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M150,20 L170,40 M170,20 L150,40" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M30,100 L70,100 M50,80 L50,120" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="120" y="90" width="40" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M100,140 Q120,160 140,140" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="30" cy="170" r="5" fill="currentColor" />
+          <path d="M60,160 L90,190" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
         <div className="lg:col-span-8 space-y-8 text-left">
           <div className="space-y-4">
             <motion.div

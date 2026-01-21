@@ -1,82 +1,88 @@
 import { Block } from "@/components/ui/block";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Download, ArrowRight, Layout, Database, Terminal } from "lucide-react";
+import { Download, Terminal, Cpu, Database } from "lucide-react";
 
 export function Hero() {
   return (
-    <div className="relative mb-32">
-      {/* Foundation Base Block */}
-      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[110%] h-16 bg-muted/10 rounded-[4rem] blur-2xl pointer-events-none" />
+    <div className="relative mb-32 pt-10">
+      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-full h-96 bg-primary/5 blur-[120px] pointer-events-none" />
       
-      <Block className="p-16 md:p-24 text-center border-4 border-primary/20 relative" bounce={false}>
-        {/* Decorative Blocks */}
-        <motion.div 
-          className="absolute -top-10 -left-10 w-24 h-24 bg-primary/10 rounded-3xl border-2 border-primary/20 rotate-12 flex items-center justify-center"
-          animate={{ y: [0, -10, 0], rotate: [12, 15, 12] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        >
-          <Layout className="w-10 h-10 text-primary/40" />
-        </motion.div>
-        <motion.div 
-          className="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary/10 rounded-[2rem] border-2 border-secondary/20 -rotate-12 flex items-center justify-center"
-          animate={{ y: [0, 10, 0], rotate: [-12, -15, -12] }}
-          transition={{ duration: 5, repeat: Infinity }}
-        >
-          <Terminal className="w-12 h-12 text-secondary/40" />
-        </motion.div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <Block className="lg:col-span-8 p-12 md:p-20" title="System Initialization">
+          <div className="space-y-8 relative z-20 text-left">
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="flex items-center gap-3"
+              >
+                <div className="h-px w-8 bg-primary" />
+                <span className="text-xs font-mono tracking-[0.3em] text-primary uppercase">Active Developer</span>
+              </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-10 relative z-20">
-          <div className="space-y-4">
-            <motion.h1 
-              className="text-6xl md:text-8xl font-display font-black text-foreground tracking-tighter"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, type: "spring" }}
-            >
-              Varada <span className="text-primary">Kumbhar</span>
-            </motion.h1>
-            
-            <motion.div
+              <motion.h1 
+                className="text-6xl md:text-8xl font-display font-black text-white leading-[0.9] tracking-tighter"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                VARADA <br />
+                <span className="text-primary glow-primary">KUMBHAR</span>
+              </motion.h1>
+            </div>
+
+            <motion.p 
+              className="text-xl md:text-2xl text-muted-foreground font-mono leading-tight max-w-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="inline-flex items-center gap-2 px-6 py-2 bg-accent/20 rounded-full border-2 border-accent/30"
+              transition={{ delay: 0.2 }}
             >
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-black uppercase tracking-[0.2em] text-accent-foreground">Product Developer</span>
-            </motion.div>
+              Building digital products <br />
+              <span className="text-white border-b-2 border-primary/40">one modular block at a time.</span>
+            </motion.p>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button size="lg" className="rounded-none h-14 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-mono font-bold tracking-tighter shadow-lg shadow-primary/20" asChild>
+                <a href="#projects">EXECUTE_WORKS.EXE</a>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-none h-14 px-8 border-primary/20 font-mono font-bold hover:bg-primary/5" asChild>
+                <a href="/resume.pdf" download>FETCH_RESUME</a>
+              </Button>
+            </div>
           </div>
+        </Block>
 
-          <motion.p 
-            className="text-xl md:text-3xl text-muted-foreground font-display font-bold leading-tight"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            Building products, <br className="md:hidden" />
-            <span className="text-primary italic underline decoration-4 underline-offset-8">one block at a time</span>
-          </motion.p>
-
-          <motion.div 
-            className="flex flex-wrap justify-center gap-6 pt-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-          >
-            <Button size="lg" className="rounded-2xl h-16 px-10 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg shadow-[0_8px_0_0_#9333ea] active:shadow-none active:translate-y-2 transition-all" asChild>
-              <a href="#projects">
-                View My Work <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="rounded-2xl h-16 px-10 border-4 border-primary/20 font-black text-lg hover:bg-primary/5 active:translate-y-1 transition-all" asChild>
-              <a href="/resume.pdf" download>
-                Resume <Download className="ml-2 w-5 h-5" />
-              </a>
-            </Button>
-          </motion.div>
+        <div className="lg:col-span-4 grid grid-cols-1 gap-6">
+          <Block title="Hardware Status" variant="primary">
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between font-mono text-xs">
+                <span className="opacity-60 uppercase">Uptime</span>
+                <span className="text-primary">99.9%</span>
+              </div>
+              <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                <motion.div 
+                  className="h-full bg-primary" 
+                  initial={{ width: 0 }}
+                  animate={{ width: "99.9%" }}
+                  transition={{ duration: 2 }}
+                />
+              </div>
+              <div className="flex justify-center py-6">
+                <Cpu className="w-16 h-16 text-primary/20" />
+              </div>
+            </div>
+          </Block>
+          <Block title="Database Connection" variant="secondary">
+            <div className="space-y-4">
+               <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-secondary rounded-full animate-pulse" />
+                  <span className="text-xs font-mono uppercase tracking-widest text-secondary">Secured</span>
+               </div>
+               <Database className="w-12 h-12 text-secondary/20" />
+            </div>
+          </Block>
         </div>
-      </Block>
+      </div>
     </div>
   );
 }

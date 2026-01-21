@@ -7,7 +7,7 @@ import { Experience } from "@/components/sections/experience";
 import { Contact } from "@/components/sections/contact";
 import { BuilderLogo } from "@/components/ui/builder-logo";
 import { motion } from "framer-motion";
-import builderLogoImg from "@assets/generated_images/tech_girl_builder_cartoon_waving.png";
+import techGirlLogoImg from "@assets/generated_images/sleek_tech_girl_avatar_glassmorphism.png";
 
 export default function Home() {
   useLenis();
@@ -15,39 +15,43 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 pb-12 overflow-x-hidden">
       
-      {/* Friendly Navbar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
-        <div className="bg-white/80 backdrop-blur-xl border-2 border-primary/10 shadow-[0_8px_32px_rgba(0,0,0,0.05)] rounded-2xl px-6 md:px-10 h-20 flex items-center justify-between">
+      {/* Tech Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/60 backdrop-blur-xl">
+        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <BuilderLogo src={builderLogoImg} />
+            <BuilderLogo src={techGirlLogoImg} />
             <div className="flex flex-col">
-              <span className="font-display font-black text-xl tracking-tighter text-primary">VARADA</span>
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase opacity-40 -mt-1">Product Developer</span>
+              <span className="font-display font-black text-xl tracking-tighter text-white">VARADA</span>
+              <span className="text-[8px] font-mono font-bold tracking-[0.4em] uppercase text-primary -mt-1">01_DEV_MODE</span>
             </div>
           </div>
           
-          <div className="hidden md:flex items-center gap-8 text-sm font-bold opacity-60">
-            <a href="#" className="hover:text-primary hover:opacity-100 transition-all hover:scale-110">Home</a>
-            <a href="#projects" className="hover:text-primary hover:opacity-100 transition-all hover:scale-110">Projects</a>
-            <a href="#about" className="hover:text-primary hover:opacity-100 transition-all hover:scale-110">About</a>
-            <a href="#contact" className="hover:text-primary hover:opacity-100 transition-all hover:scale-110">Contact</a>
+          <div className="hidden md:flex items-center gap-10 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">
+              <span className="opacity-20 text-[8px]">01</span> HOME
+            </a>
+            <a href="#projects" className="hover:text-primary transition-colors flex items-center gap-2">
+              <span className="opacity-20 text-[8px]">02</span> WORKS
+            </a>
+            <a href="#about" className="hover:text-primary transition-colors flex items-center gap-2">
+              <span className="opacity-20 text-[8px]">03</span> ABOUT
+            </a>
+            <a href="#contact" className="hover:text-primary transition-colors flex items-center gap-2">
+              <span className="opacity-20 text-[8px]">04</span> CONTACT
+            </a>
           </div>
 
-          <div className="flex gap-2">
-             <div className="w-3 h-3 rounded-full bg-primary/20" />
-             <div className="w-3 h-3 rounded-full bg-secondary/20" />
+          <div className="flex items-center gap-4">
+             <div className="hidden lg:flex flex-col items-end">
+                <span className="text-[8px] font-mono opacity-40">LATENCY: 12ms</span>
+                <span className="text-[8px] font-mono text-accent">STATUS: ONLINE</span>
+             </div>
+             <div className="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_hsl(var(--accent))]" />
           </div>
         </div>
       </nav>
 
-      <main className="container mx-auto px-4 pt-36 max-w-6xl">
-        {/* Structural Guide Lines (Visual background elements) */}
-        <div className="fixed inset-0 pointer-events-none opacity-5">
-           <div className="absolute left-1/4 top-0 bottom-0 w-px bg-primary" />
-           <div className="absolute left-3/4 top-0 bottom-0 w-px bg-primary" />
-           <div className="absolute top-1/2 left-0 right-0 h-px bg-primary" />
-        </div>
-
+      <main className="container mx-auto px-6 pt-32 max-w-7xl">
         <Hero />
         <About />
         <Skills />
@@ -56,13 +60,12 @@ export default function Home() {
         <Contact />
       </main>
 
-      <footer className="mt-20 py-12 text-center text-muted-foreground border-t-4 border-dashed border-primary/5">
-        <div className="flex justify-center gap-4 mb-6">
-          {[1,2,3,4].map(i => (
-            <div key={i} className="w-6 h-6 rounded-md bg-muted/20 border-2 border-muted/10 shadow-inner" />
-          ))}
+      <footer className="mt-20 py-12 border-t border-white/5 text-center">
+        <div className="flex justify-center gap-8 mb-6 font-mono text-[8px] opacity-20 uppercase tracking-[0.5em]">
+          <span>© VARADA_DEV_2026</span>
+          <span>BUILD_ID_8842</span>
+          <span>ENCRYPTED_CONNECTION</span>
         </div>
-        <p className="text-sm font-black tracking-widest uppercase opacity-40">Assembled Piece by Piece • 2026</p>
       </footer>
     </div>
   );

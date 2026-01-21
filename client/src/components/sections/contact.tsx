@@ -2,7 +2,7 @@ import { Block } from "@/components/ui/block";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send, Puzzle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -24,52 +24,55 @@ export function Contact() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     toast({
-      title: "Message Sent! 🧩",
-      description: "You've placed the final piece of the puzzle. I'll be in touch soon!",
+      title: "Assembly Complete! 🧩",
+      description: "You've added the final piece. I'll reach out soon!",
     });
     form.reset();
   }
 
   return (
-    <div id="contact" className="mb-24 scroll-mt-24">
-      <div className="flex items-center gap-4 mb-12">
-        <h2 className="text-3xl font-bold">Final Puzzle Block</h2>
-        <div className="flex-1 h-px bg-border border-dashed border-t-2" />
+    <div id="contact" className="mb-24 scroll-mt-32">
+      <div className="flex items-center gap-6 mb-16">
+        <h2 className="text-5xl font-black tracking-tighter">Final <span className="text-primary">Module</span></h2>
+        <div className="flex-1 h-2 bg-primary/10 rounded-full" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <div className="md:col-span-4 space-y-4">
-          <Block className="p-8 h-full" variant="purple">
-            <h3 className="text-xl font-bold mb-6">Let's Connect! 🧩</h3>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-4 space-y-6">
+          <Block className="p-10 h-full border-4" variant="purple">
+            <div className="p-5 bg-white/40 rounded-2xl w-fit mb-8 shadow-sm">
+              <Puzzle className="w-10 h-10" />
+            </div>
+            <h3 className="text-3xl font-black mb-8 leading-tight tracking-tight">Let's Connect!</h3>
             <div className="space-y-4">
-              <a href="#" className="flex items-center gap-3 p-3 rounded-2xl hover:bg-white/40 transition-colors">
-                <Mail className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">Email</span>
+              <a href="mailto:email@example.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
+                <Mail className="w-5 h-5" />
+                <span>Mailbox</span>
               </a>
-              <a href="#" className="flex items-center gap-3 p-3 rounded-2xl hover:bg-white/40 transition-colors">
+              <a href="https://linkedin.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
                 <Linkedin className="w-5 h-5 text-blue-500" />
-                <span className="text-sm font-medium">LinkedIn</span>
+                <span>LinkedIn</span>
               </a>
-              <a href="#" className="flex items-center gap-3 p-3 rounded-2xl hover:bg-white/40 transition-colors">
-                <Github className="w-5 h-5 text-slate-700" />
-                <span className="text-sm font-medium">GitHub</span>
+              <a href="https://github.com/varada2315" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
+                <Github className="w-5 h-5 text-slate-800" />
+                <span>GitHub</span>
               </a>
             </div>
           </Block>
         </div>
 
-        <div className="md:col-span-8">
-          <Block className="p-10" variant="peach" bounce={false}>
+        <div className="lg:col-span-8">
+          <Block className="p-12 border-4" variant="peach" bounce={false}>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="font-black uppercase tracking-widest text-[10px] opacity-40">Frequency Channel (Email)</FormLabel>
                       <FormControl>
-                        <Input placeholder="your@email.com" {...field} className="rounded-xl border-2 border-primary/10 bg-white/50" />
+                        <Input placeholder="your@email.com" {...field} className="h-16 rounded-2xl border-4 border-primary/10 bg-white/50 px-6 font-bold" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -80,16 +83,16 @@ export function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel className="font-black uppercase tracking-widest text-[10px] opacity-40">Instruction Module (Message)</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="What shall we build today?" className="min-h-[150px] rounded-xl border-2 border-primary/10 bg-white/50" {...field} />
+                        <Textarea placeholder="What shall we build today?" className="min-h-[180px] rounded-2xl border-4 border-primary/10 bg-white/50 p-6 font-bold" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold shadow-soft">
-                  Send Piece <Send className="ml-2 w-4 h-4" />
+                <Button type="submit" size="lg" className="w-full h-20 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xl shadow-[0_10px_0_0_#9333ea] active:shadow-none active:translate-y-2 transition-all">
+                  Launch Message <Send className="ml-2 w-6 h-6" />
                 </Button>
               </form>
             </Form>

@@ -1,0 +1,187 @@
+Theme: PRODUCT ARCHITECT – TECH BUILDING BLOCKS
+
+Prompt:
+
+Design a visually engaging, responsive personal portfolio website for Varada Kumbhar using a
+“Building Blocks of a Product” concept.
+
+Think:
+
+Lego blocks
+
+Modular UI components
+
+Dashboard tiles
+
+Product architecture diagram
+
+Each section should look like a physical block stacked together to form a product tower.
+
+Style:
+
+Techy
+
+Playful but professional
+
+3D depth
+
+Shadows
+
+Slight tilt / staggered blocks
+
+Hover interactions
+
+Not flat. Not boring.
+It should feel like you are constructing a product while scrolling.
+
+🏗 LAYOUT CONCEPT
+HERO = FOUNDATION BLOCK
+
+A big base block like a platform:
+
+Name engraved on it
+
+Animated text:
+“Building products, one block at a time”
+
+Buttons as mini blocks you can click
+
+ABOUT = CORE BLOCK
+
+Looks like a stacked cube
+On hover → it slightly lifts up
+Shows:
+
+Your story
+
+Podcast
+
+Personality
+
+SKILLS = MICRO BLOCK WALL
+
+Each skill is a small cube
+They auto-arrange like Tetris:
+
+🧩 Product
+🧩 Tech
+🧩 Tools
+🧩 Soft skills
+
+Hover:
+
+Glow
+
+Border animation
+
+Tooltip
+
+PROJECTS = MAIN TOWER
+
+This is the highlight 🔥
+
+Design a vertical tower of blocks
+Each block = one project
+
+Each block contains:
+
+Project name
+
+Category tag
+
+“View project” button
+
+Blocks are:
+
+Slightly offset
+
+Different heights
+
+Connected with lines (like system architecture)
+
+Your links:
+
+Funnel Analysis
+
+Cyaphire AI
+
+Growitate Website
+
+Product Review
+
+Chess Engine
+
+Secure Doc
+
+Network Analysis
+
+EXPERIENCE = SUPPORT BLOCK
+
+Two large side blocks:
+
+Deploid X
+
+ASD India
+
+ACHIEVEMENTS = GOLD BLOCK
+
+Shiny special block:
+
+Research paper
+
+Certifications
+
+Podcast
+
+CONTACT = FINAL BLOCK
+
+Looks like the last piece completing the structure
+Form embedded inside block
+
+🎨 VISUAL STYLE
+
+Soft gradients on blocks
+
+Neumorphism / glassmorphism
+
+3D depth
+
+Parallax scroll
+
+Blocks slightly move when scrolling
+
+Shadow layers
+
+Micro animations
+
+Connector wires between blocks
+
+COLORS
+
+Dark navy base
+
+Neon accent (purple / cyan)
+
+White text
+
+Subtle glow
+
+TECH REQUIREMENTS
+
+Fully responsive
+
+HTML, CSS, JS OR React
+
+GSAP / Framer Motion for animations
+
+Clean structure
+
+SPECIAL TOUCH
+
+Add a side label:
+
+“A Product is not built. It is assembled.”
+
+OUTPUT
+
+Generate full modern production code with animations.

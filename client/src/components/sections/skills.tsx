@@ -1,87 +1,85 @@
 import { Block } from "@/components/ui/block";
-import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
-const skills = {
-  product: [
-    "PRDs", "User Stories", "Product Documentation", "Requirement Analysis", 
-    "Product Testing", "User Workflow Analysis"
-  ],
-  operations: [
-    "Task Management", "Stakeholder Communication", "Timeline Tracking", 
-    "Reporting", "Process Optimization", "Cross-functional collaboration"
-  ],
-  technical: [
-    "Python", "SQL", "Git", "Linux", "APIs (basic)", 
-    "Networking", "CI/CD fundamentals", "Cloud basics"
-  ],
-  tools: [
-    "Jira", "Notion", "Figma (basic)", "Asana", 
-    "Trello", "MS Excel (Pivot, VLOOKUP)"
-  ],
-  soft: [
-    "Communication", "Structured thinking", "Problem-solving", 
-    "Leadership", "Public speaking"
-  ]
-};
+const skillCategories = [
+  {
+    title: "Product",
+    icon: "🧩",
+    skills: ["PRDs", "User Stories", "Product Docs", "Requirements", "Testing", "Workflows"]
+  },
+  {
+    title: "Operations",
+    icon: "⚙",
+    skills: ["Task Mgmt", "Stakeholder Comms", "Timeline Tracking", "Reporting", "Process Opt", "Collaboration"]
+  },
+  {
+    title: "Technical",
+    icon: "💻",
+    skills: ["Python", "SQL", "Git", "Linux", "APIs", "Networking"]
+  },
+  {
+    title: "Tools",
+    icon: "🛠",
+    skills: ["Jira", "Notion", "Figma", "Asana", "Trello", "Excel"]
+  },
+  {
+    title: "Soft Skills",
+    icon: "🤝",
+    skills: ["Communication", "Thinking", "Problem Solving", "Leadership", "Public Speaking"]
+  }
+];
 
 export function Skills() {
   return (
-    <div className="space-y-4 mb-16">
-      <h2 className="text-2xl font-display font-bold mb-6 flex items-center gap-2">
-        <span className="w-8 h-1 bg-primary inline-block rounded-full"></span>
-        Skill Blocks
-      </h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Block title="🧩 Product & Business Analysis" delay={1}>
-          <div className="flex flex-wrap gap-2">
-            {skills.product.map(skill => (
-              <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-white transition-colors">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Block>
+    <div className="mb-24">
+      <motion.h2 
+        className="text-2xl md:text-3xl font-display font-bold mb-8 flex items-center gap-3"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+      >
+        <span className="w-1 h-8 bg-gradient-to-b from-primary via-primary to-secondary rounded-full"></span>
+        Micro Block Wall
+      </motion.h2>
 
-        <Block title="⚙ Project & Operations" delay={2}>
-          <div className="flex flex-wrap gap-2">
-            {skills.operations.map(skill => (
-              <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-white transition-colors">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Block>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 auto-rows-max">
+        {skillCategories.map((category, catIdx) => (
+          <motion.div 
+            key={category.title}
+            className="space-y-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: catIdx * 0.1 }}
+          >
+            {/* Category Header Block */}
+            <Block 
+              className="p-3 text-center" 
+              tilt={true}
+              delay={catIdx}
+              title={category.title}
+            >
+              <div className="text-2xl mb-1">{category.icon}</div>
+            </Block>
 
-        <Block title="💻 Technical Skills" delay={3}>
-          <div className="flex flex-wrap gap-2">
-            {skills.technical.map(skill => (
-              <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-white transition-colors">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Block>
-
-        <Block title="🛠 Tools" delay={4}>
-          <div className="flex flex-wrap gap-2">
-            {skills.tools.map(skill => (
-              <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-white transition-colors">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Block>
-
-        <Block title="🤝 Soft Skills" delay={5}>
-          <div className="flex flex-wrap gap-2">
-            {skills.soft.map(skill => (
-              <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-white transition-colors">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Block>
+            {/* Skills Blocks - Tetris style */}
+            <div className="space-y-2">
+              {category.skills.map((skill, skillIdx) => (
+                <motion.div
+                  key={skill}
+                  initial={{ opacity: 0, scale: 0.8, rotateZ: -5 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateZ: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: catIdx * 0.1 + skillIdx * 0.05 }}
+                >
+                  <div className="p-2 rounded-lg bg-card border border-primary/30 hover:border-primary/80 text-center text-xs font-medium text-muted-foreground hover:text-primary transition-all duration-300 cursor-pointer group hover:shadow-lg hover:shadow-primary/20">
+                    {skill}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

@@ -61,19 +61,19 @@ export function Projects() {
             key={idx} 
             variant={project.variant} 
             delay={idx} 
-            className="h-full flex flex-col justify-between p-10"
+            className="h-full flex flex-col justify-between p-10 glass-block"
           >
             <div>
-              <div className="p-4 bg-white rounded-2xl w-fit mb-6 shadow-sm border border-border">
+              <div className="p-4 bg-background border-2 border-primary w-fit mb-6">
                 {project.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-2 tracking-tight">{project.title}</h3>
-              <p className="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-8">{project.category}</p>
+              <h3 className="text-2xl font-black mb-2 tracking-tight uppercase">{project.title}</h3>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-8">{project.category}</p>
             </div>
             
-            <Button size="lg" variant="ghost" className="w-full bg-white/50 hover:bg-white border border-border rounded-2xl font-bold text-sm h-14" asChild>
+            <Button size="lg" variant="ghost" className="w-full bg-primary text-white border-2 border-primary rounded-none font-bold text-xs uppercase tracking-widest h-14 hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]" asChild>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View Details <ExternalLink className="ml-2 w-4 h-4" />
+                Inspect Module <ExternalLink className="ml-2 w-4 h-4" />
               </a>
             </Button>
           </Block>

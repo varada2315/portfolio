@@ -7,7 +7,7 @@ import { Experience } from "@/components/sections/experience";
 import { Contact } from "@/components/sections/contact";
 import { BuilderLogo } from "@/components/ui/builder-logo";
 import { motion } from "framer-motion";
-import builderLogoImg from "@assets/generated_images/cute_girl_builder_cartoon_waving.png";
+import builderLogoImg from "@assets/generated_images/tech_girl_builder_cartoon_waving.png";
 
 export default function Home() {
   useLenis();
@@ -22,7 +22,7 @@ export default function Home() {
             <BuilderLogo src={builderLogoImg} />
             <div className="flex flex-col">
               <span className="font-display font-black text-xl tracking-tighter text-primary">VARADA</span>
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase opacity-40 -mt-1">Architect</span>
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase opacity-40 -mt-1">Product Developer</span>
             </div>
           </div>
           

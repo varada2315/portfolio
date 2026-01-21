@@ -44,7 +44,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-6 py-2 bg-accent/20 rounded-full border-2 border-accent/30"
             >
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-black uppercase tracking-[0.2em] text-accent-foreground">Product Architect</span>
+              <span className="text-sm font-black uppercase tracking-[0.2em] text-accent-foreground">Product Developer</span>
             </motion.div>
           </div>
 

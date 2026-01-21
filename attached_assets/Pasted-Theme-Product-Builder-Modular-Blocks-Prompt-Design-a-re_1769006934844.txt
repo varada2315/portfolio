@@ -1,0 +1,216 @@
+Theme: Product Builder – Modular Blocks
+
+Prompt:
+
+Design a responsive personal portfolio website for Varada Kumbhar using a strong
+“Building Blocks of a Product” concept.
+
+The website should visually feel like:
+
+A product being constructed
+
+Modular blocks stacking
+
+UI components assembling
+
+Architecture blueprint but fun
+
+❌ No emojis
+❌ No harsh gradients
+✔ Soft pastel colors
+✔ Real block visuals
+✔ Subtle 3D depth
+
+👷 HEADER LOGO (IMPORTANT)
+
+Create a custom cartoon builder girl logo:
+
+Wearing helmet
+
+Holding a tiny block
+
+Standing near your name
+
+Animation:
+
+Waves hand every 5–7 seconds
+
+Soft friendly movement
+
+Smooth loop
+
+Style:
+
+Clean illustration
+
+Flat + soft shadow
+
+Professional (not childish)
+
+🏗 PAGE STRUCTURE (REAL BUILDING BLOCKS)
+HERO – FOUNDATION BLOCK
+
+Looks like a base platform:
+
+Big rectangular block
+
+Slight 3D depth
+
+Your name engraved
+
+Tagline:
+
+Building products, one block at a time
+
+Small blocks sit on top:
+
+View Projects
+
+Download Resume
+
+ABOUT – STACKED BLOCK
+
+A cube placed above foundation
+Connected with thin line
+
+Your story
+
+Podcast
+
+Career goals
+
+SKILLS – BLOCK WALL
+
+Looks like a brick wall
+Each skill category is a brick:
+
+Product & BA
+
+Tech
+
+Tools
+
+Soft skills
+
+On hover:
+
+Brick lifts
+
+Shadow increases
+
+PROJECTS – PRODUCT TOWER 🔥
+
+This is the highlight.
+
+Design:
+
+Vertical tower of blocks
+
+Each project = one block
+
+Blocks slightly misaligned (natural feel)
+
+Connector lines like system diagram
+
+Add your links:
+
+Funnel Analysis
+
+Cyaphire AI
+
+Growitate Website
+
+Product Review
+
+Chess Engine
+
+Secure Doc
+
+Network Analysis
+
+Each block:
+
+Project name
+
+Category tag
+
+View button
+
+EXPERIENCE – SUPPORT BLOCKS
+
+Two big side blocks holding tower:
+
+Deploid X
+
+ASD India
+
+ACHIEVEMENTS – SPECIAL BLOCK
+
+Looks premium:
+
+Slight glow
+
+Research paper section
+
+Certifications
+
+Podcast mention
+
+CONTACT – FINAL CAP BLOCK
+
+Topmost block:
+
+Contact form
+
+Social links
+
+When user reaches:
+→ small animation showing structure complete
+
+🎨 DESIGN STYLE
+
+Soft pastel background
+
+Light shadows
+
+Rounded corners
+
+Slight 3D depth
+
+Subtle motion on scroll
+
+No emojis
+
+No loud gradients
+
+✨ MICRO INTERACTIONS
+
+Blocks slightly bounce on hover
+
+Builder girl waves
+
+Lines animate when scrolling
+
+Blocks appear as if being placed
+
+TECH REQUIREMENTS
+
+Fully responsive
+
+HTML/CSS/JS or React
+
+Use CSS transforms for 3D
+
+Lightweight animations
+
+SEO friendly
+
+FINAL FEEL
+
+User should think:
+
+“Wow, she literally BUILT her portfolio.”
+
+OUTPUT
+
+Generate full production-ready code.

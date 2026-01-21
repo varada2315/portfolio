@@ -45,15 +45,15 @@ export function Contact() {
             </div>
             <h3 className="text-3xl font-black mb-8 leading-tight tracking-tight">Let's Connect!</h3>
             <div className="space-y-4">
-              <a href="mailto:email@example.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
+              <a href="mailto:varadakumbhar2004@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
                 <Mail className="w-5 h-5" />
                 <span>Mailbox</span>
               </a>
-              <a href="https://linkedin.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
+              <a href="https://www.linkedin.com/in/k-varada-854b69280/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
                 <Linkedin className="w-5 h-5 text-blue-500" />
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/varada2315" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
+              <a href="https://github.com/varada2315" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-white/20 hover:bg-white/40 transition-all font-black text-xs uppercase tracking-widest">
                 <Github className="w-5 h-5 text-slate-800" />
                 <span>GitHub</span>
               </a>

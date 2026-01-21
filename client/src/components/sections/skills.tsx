@@ -1,35 +1,67 @@
 import { Block } from "@/components/ui/block";
 import { motion } from "framer-motion";
 
-const skills = [
-  { cat: "Product & BA", items: ["PRDs", "User Stories", "Product Docs", "Requirements", "Testing", "Workflows"] },
-  { cat: "Tech", items: ["Python", "SQL", "Git", "Linux", "APIs", "Networking"] },
-  { cat: "Tools", items: ["Jira", "Notion", "Figma", "Asana", "Trello", "Excel"] },
-  { cat: "Soft Skills", items: ["Communication", "Thinking", "Problem Solving", "Leadership", "Speaking"] }
+const categories = [
+  { 
+    title: "Product", 
+    variant: "purple" as const,
+    icon: "🧩", 
+    skills: ["PRDs", "User Stories", "Docs", "Analysis", "Testing"] 
+  },
+  { 
+    title: "Operations", 
+    variant: "teal" as const,
+    icon: "⚙️", 
+    skills: ["Tasks", "Comms", "Timelines", "Reporting", "Process"] 
+  },
+  { 
+    title: "Technical", 
+    variant: "peach" as const,
+    icon: "💻", 
+    skills: ["Python", "SQL", "Git", "Linux", "APIs"] 
+  },
+  { 
+    title: "Tools", 
+    variant: "beige" as const,
+    icon: "🛠️", 
+    skills: ["Jira", "Notion", "Figma", "Asana", "Trello"] 
+  },
+  { 
+    title: "Soft Skills", 
+    variant: "default" as const,
+    icon: "🤝", 
+    skills: ["Comms", "Thinking", "Leadership", "Public Speaking"] 
+  }
 ];
 
 export function Skills() {
   return (
-    <div className="mb-32">
-      <h2 className="text-center font-display font-black text-4xl mb-12 uppercase tracking-tighter">Skill Block Wall</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {skills.map((skillSet, idx) => (
-          <div key={idx} className="space-y-4">
-            <Block title={skillSet.cat} className="h-full border-2" depth={false} delay={idx}>
-              <div className="flex flex-wrap gap-2">
-                {skillSet.items.map((skill, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.1, rotate: 2 }}
-                    className="px-3 py-1.5 bg-muted rounded-md text-sm font-bold border-b-4 border-border/50"
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
-              </div>
-            </Block>
-          </div>
+    <div className="mb-24">
+      <div className="flex items-center gap-4 mb-8">
+        <h2 className="text-3xl font-bold">Skill Blocks</h2>
+        <div className="flex-1 h-px bg-border border-dashed border-t-2" />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {categories.map((cat, idx) => (
+          <Block 
+            key={cat.title} 
+            variant={cat.variant} 
+            delay={idx} 
+            title={cat.title}
+            className="group"
+          >
+            <div className="text-3xl mb-4 group-hover:scale-125 transition-transform duration-500">
+              {cat.icon}
+            </div>
+            <div className="space-y-2">
+              {cat.skills.map(skill => (
+                <div key={skill} className="text-sm font-medium opacity-80 hover:opacity-100 transition-opacity">
+                  • {skill}
+                </div>
+              ))}
+            </div>
+          </Block>
         ))}
       </div>
     </div>

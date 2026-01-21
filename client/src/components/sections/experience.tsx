@@ -3,35 +3,55 @@ import { motion } from "framer-motion";
 
 export function Experience() {
   return (
-    <div className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      <div className="lg:col-span-4 space-y-4">
-        <h2 className="font-display font-black text-2xl uppercase mb-6">Support Blocks</h2>
-        <Block title="Exp 01" className="border-4 p-8 h-64 flex flex-col justify-center" depth={true}>
-          <h3 className="text-2xl font-black uppercase tracking-tight">Product Manager Intern</h3>
-          <p className="text-primary font-bold">Deploid X</p>
-          <p className="text-sm text-muted-foreground mt-2">Managing lifecycle & cross-functional assembly.</p>
-        </Block>
-        <Block title="Exp 02" className="border-4 p-8 h-64 flex flex-col justify-center" depth={true} delay={1}>
-          <h3 className="text-2xl font-black uppercase tracking-tight">Project Intern</h3>
-          <p className="text-primary font-bold">ASD India Services</p>
-          <p className="text-sm text-muted-foreground mt-2">Development & project architecture.</p>
-        </Block>
-      </div>
-
-      <div className="lg:col-span-8 space-y-4">
-        <h2 className="font-display font-black text-2xl uppercase mb-6">Special Blocks</h2>
-        <Block title="Achievements" className="border-4 p-12 bg-primary/5 border-primary/20" depth={true} delay={2}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-2">
-              <h4 className="text-lg font-black uppercase underline decoration-primary decoration-4">Research Paper</h4>
-              <p className="text-sm text-muted-foreground italic">International Journal Publication 2024</p>
-            </div>
-            <div className="space-y-2">
-              <h4 className="text-lg font-black uppercase underline decoration-primary decoration-4">Podcast</h4>
-              <p className="text-sm text-muted-foreground italic">The Speakopedia - Host</p>
-            </div>
+    <div className="mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-8">
+          <div className="flex items-center gap-4">
+            <h2 className="text-3xl font-bold">Experience</h2>
+            <div className="flex-1 h-px bg-border border-dashed border-t-2" />
           </div>
-        </Block>
+
+          <Block className="p-8 border-l-8 border-primary">
+            <h3 className="text-xl font-bold mb-1">Product Manager Intern</h3>
+            <p className="text-primary font-semibold mb-3">Deploid X</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Managing product lifecycles and coordinating between teams to build cool things.
+            </p>
+          </Block>
+
+          <Block className="p-8 border-l-8 border-secondary">
+            <h3 className="text-xl font-bold mb-1">Developer & Project Intern</h3>
+            <p className="text-secondary font-semibold mb-3">ASD India Services</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Working on web solutions and learning the ropes of project delivery.
+            </p>
+          </Block>
+        </div>
+
+        <div className="space-y-8">
+          <div className="flex items-center gap-4">
+            <h2 className="text-3xl font-bold">Achievements</h2>
+            <div className="flex-1 h-px bg-border border-dashed border-t-2" />
+          </div>
+
+          <Block variant="peach" className="p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-3xl">🏆</span>
+              <h3 className="text-xl font-bold">Research Paper</h3>
+            </div>
+            <p className="text-sm opacity-80 mb-1">International Journal Publication</p>
+            <p className="text-xs font-mono opacity-60">2024 • Academic Excellence</p>
+          </Block>
+
+          <Block variant="purple" className="p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-3xl">🏅</span>
+              <h3 className="text-xl font-bold">Podcast Creator</h3>
+            </div>
+            <p className="text-sm opacity-80 mb-1">The Speakopedia</p>
+            <p className="text-xs font-mono opacity-60">Top Voice in Tech Growth</p>
+          </Block>
+        </div>
       </div>
     </div>
   );

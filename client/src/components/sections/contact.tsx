@@ -88,7 +88,7 @@ export function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="building-block w-full h-16 bg-primary hover:bg-primary/90 text-primary-foreground font-bold transition-all">
+                <Button type="submit" size="lg" className="building-block w-full h-16 bg-primary border-border hover:bg-primary text-primary-foreground font-bold transition-all">
                   Send Message <Send className="ml-2 w-5 h-5" />
                 </Button>
               </form>

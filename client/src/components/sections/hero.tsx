@@ -46,12 +46,12 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Button size="lg" className="building-block h-14 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold" asChild>
+            <Button size="lg" className="building-block h-14 px-8 bg-primary border-border hover:bg-primary text-primary-foreground font-bold" asChild>
               <a href="#projects">
                 See My Work <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="building-block h-14 px-8 border-2 border-primary/20 font-bold hover:bg-primary/5" asChild>
+            <Button size="lg" variant="outline" className="building-block h-14 px-8 border-2 border-border bg-white text-foreground font-bold hover:bg-muted" asChild>
               <a href="/resume.pdf" download>Download CV</a>
             </Button>
           </motion.div>

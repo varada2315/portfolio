@@ -71,7 +71,7 @@ export function Projects() {
               <p className="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-8">{project.category}</p>
             </div>
             
-            <Button size="lg" variant="ghost" className="w-full building-block bg-white/50 hover:bg-white border-2 border-border font-bold text-sm h-14" asChild>
+            <Button size="lg" variant="ghost" className="w-full building-block bg-white hover:bg-white border-2 border-border font-bold text-sm h-14" asChild>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 View Details <ExternalLink className="ml-2 w-4 h-4" />
               </a>

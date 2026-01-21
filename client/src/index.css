@@ -7,9 +7,9 @@
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
 
-  --radius-sm: 0.4rem;
-  --radius-md: 0.8rem;
-  --radius-lg: 1.2rem;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
   
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -33,27 +33,27 @@
 }
 
 :root {
-  /* Modern Lavender Studio Palette */
+  /* High Contrast Modern Lavender Studio Palette */
   --background: 260 20% 98%; 
-  --foreground: 260 40% 15%;
+  --foreground: 260 50% 10%;
 
   --card: 0 0% 100%;
-  --card-foreground: 260 40% 15%;
+  --card-foreground: 260 50% 10%;
 
-  --primary: 260 100% 70%; /* Soft Lavender */
-  --primary-foreground: 0 0% 100%;
+  --primary: 260 80% 65%; /* Vibrant Lavender */
+  --primary-foreground: 260 20% 98%;
 
-  --secondary: 190 60% 60%; /* Muted Teal */
-  --secondary-foreground: 0 0% 100%;
+  --secondary: 190 70% 45%; /* Deep Teal */
+  --secondary-foreground: 190 20% 98%;
 
-  --accent: 280 80% 85%; /* Soft Purple */
-  --accent-foreground: 280 40% 20%;
+  --accent: 280 90% 80%; /* Bright Purple */
+  --accent-foreground: 280 50% 10%;
 
-  --muted: 260 10% 94%;
-  --muted-foreground: 260 10% 45%;
+  --muted: 260 15% 92%;
+  --muted-foreground: 260 15% 40%;
 
-  --border: 260 20% 92%;
-  --radius: 1rem;
+  --border: 260 30% 15%; /* Bold Dark Borders */
+  --radius: 0px;
 }
 
 @layer base {
@@ -76,25 +76,7 @@
 }
 
 @layer utilities {
-  .glass-block {
-    @apply bg-card/70 backdrop-blur-md border border-white/40 shadow-sm relative overflow-hidden;
-    &::after {
-      content: '';
-      @apply absolute top-0 left-0 w-full h-1 bg-primary/20;
-    }
-  }
-  
   .building-block {
-    @apply bg-card border-2 border-border shadow-[4px_4px_0px_0px_hsl(var(--border))] hover:shadow-[2px_2px_0px_0px_hsl(var(--border))] hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200;
-  }
-
-  .block-shadow {
-    box-shadow: 
-      0 10px 30px -5px rgba(168, 85, 247, 0.05),
-      0 4px 6px -2px rgba(168, 85, 247, 0.02);
-  }
-
-  .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-1;
+    @apply bg-card border-2 border-border shadow-[4px_4px_0px_0px_hsl(var(--border))] hover:shadow-[1px_1px_0px_0px_hsl(var(--border))] hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-100;
   }
 }

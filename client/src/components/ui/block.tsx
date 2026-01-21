@@ -20,35 +20,29 @@ export function Block({
   bounce = true
 }: BlockProps) {
   const variants = {
-    default: "bg-card border-border shadow-[4px_4px_0px_0px_hsl(var(--border))]",
-    primary: "bg-primary border-primary shadow-[4px_4px_0px_0px_hsl(var(--primary-foreground)/0.3)] text-primary-foreground",
-    secondary: "bg-secondary border-secondary shadow-[4px_4px_0px_0px_hsl(var(--secondary-foreground)/0.3)] text-secondary-foreground",
-    accent: "bg-accent border-accent shadow-[4px_4px_0px_0px_hsl(var(--accent-foreground)/0.3)] text-accent-foreground"
+    default: "bg-white border-border shadow-sm",
+    primary: "bg-primary/5 border-primary/20 shadow-sm",
+    secondary: "bg-secondary/5 border-secondary/20 shadow-sm",
+    accent: "bg-accent/20 border-accent/30 shadow-sm"
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.3, delay: delay * 0.05 }}
-      whileHover={bounce ? { x: 2, y: 2, boxShadow: "2px 2px 0px 0px currentColor" } : {}}
+      transition={{ duration: 0.5, delay: delay * 0.1 }}
+      whileHover={bounce ? { y: -5 } : {}}
       className={cn(
-        "border-2 p-6 flex flex-col relative overflow-hidden transition-all duration-200",
+        "rounded-2xl border p-6 flex flex-col relative overflow-hidden transition-all duration-300",
         variants[variant],
         className
       )}
     >
       {title && (
         <div className="mb-4 flex items-center gap-2">
-          <div className={cn(
-            "w-1 h-4",
-            variant === 'default' ? "bg-primary" : "bg-current opacity-50"
-          )} />
-          <h3 className={cn(
-            "text-xs font-display font-bold uppercase tracking-widest",
-            variant === 'default' ? "text-muted-foreground" : "text-current opacity-80"
-          )}>
+          <div className="w-1 h-4 rounded-full bg-primary" />
+          <h3 className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground">
             {title}
           </h3>
         </div>
@@ -56,12 +50,6 @@ export function Block({
       
       <div className="flex-1 relative z-10">
         {children}
-      </div>
-      
-      {/* Block Connector Visual */}
-      <div className="absolute top-2 right-2 flex gap-1 opacity-20">
-        <div className="w-1.5 h-1.5 bg-current rounded-full" />
-        <div className="w-1.5 h-1.5 bg-current rounded-full" />
       </div>
     </motion.div>
   );

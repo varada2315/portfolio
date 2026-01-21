@@ -44,13 +44,13 @@ export function Skills() {
             variant={cat.variant} 
             delay={idx} 
             title={cat.title}
-            className="building-block"
+            className="glass-block"
           >
             <div className="space-y-3">
               {cat.skills.map(skill => (
                 <div key={skill} className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary/20" />
-                  <span className="text-sm font-medium opacity-70">
+                  <div className="w-2 h-2 bg-primary/20" />
+                  <span className="text-sm font-bold uppercase tracking-tight opacity-70">
                     {skill}
                   </span>
                 </div>

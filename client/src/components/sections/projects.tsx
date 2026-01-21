@@ -49,8 +49,21 @@ const projects = [
 
 export function Projects() {
   return (
-    <div id="projects" className="mb-32 scroll-mt-32">
-      <div className="flex flex-col md:flex-row md:items-center gap-6 mb-16">
+    <div id="projects" className="mb-32 scroll-mt-32 relative">
+      {/* Tech Doodles Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03] text-primary">
+        <svg 
+          className="absolute -left-20 bottom-0 w-[500px] h-[500px]" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="140" y="120" width="30" height="20" rx="4" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M80,150 L100,170 M100,150 L80,170" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M10,150 C30,150 30,130 50,130" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      </div>
+
+      <div className="flex flex-col md:flex-row md:items-center gap-6 mb-16 relative z-10">
         <h2 className="text-4xl font-black tracking-tight">Project <span className="text-primary">Showcase</span></h2>
         <div className="flex-1 h-px bg-border hidden md:block" />
       </div>

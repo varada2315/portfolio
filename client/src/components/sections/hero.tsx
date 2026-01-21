@@ -11,7 +11,7 @@ export function Hero() {
       {/* Tech Doodles Hero Background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <svg 
-          className="absolute -right-20 -top-10 w-[500px] h-[500px] opacity-[0.05] text-primary animate-pulse" 
+          className="absolute -right-20 -top-10 w-[500px] h-[500px] opacity-[0.03] text-primary" 
           viewBox="0 0 200 200" 
           xmlns="http://www.w3.org/2000/svg"
         >

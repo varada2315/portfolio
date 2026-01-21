@@ -31,8 +31,21 @@ const categories = [
 
 export function Skills() {
   return (
-    <div className="mb-32">
-      <div className="flex items-center gap-6 mb-12">
+    <div className="mb-32 relative">
+      {/* Tech Doodles Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03] text-primary">
+        <svg 
+          className="absolute -right-20 bottom-0 w-[400px] h-[400px]" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M40,40 L60,40 L60,60 L40,60 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="150" cy="60" r="10" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M20,100 Q40,80 60,100 T100,100" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      </div>
+
+      <div className="flex items-center gap-6 mb-12 relative z-10">
         <h2 className="text-4xl font-black tracking-tight">Skills <span className="text-primary">Inventory</span></h2>
         <div className="flex-1 h-px bg-border" />
       </div>

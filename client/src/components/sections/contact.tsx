@@ -31,8 +31,21 @@ export function Contact() {
   }
 
   return (
-    <div id="contact" className="mb-24 scroll-mt-32">
-      <div className="flex items-center gap-6 mb-16">
+    <div id="contact" className="mb-24 scroll-mt-32 relative">
+      {/* Tech Doodles Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03] text-primary">
+        <svg 
+          className="absolute -left-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px]" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M30,100 L70,100 M50,80 L50,120" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="120" y="90" width="40" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="30" cy="170" r="5" fill="currentColor" />
+        </svg>
+      </div>
+
+      <div className="flex items-center gap-6 mb-16 relative z-10">
         <h2 className="text-4xl font-black tracking-tight">Final <span className="text-primary">Module</span></h2>
         <div className="flex-1 h-px bg-border" />
       </div>

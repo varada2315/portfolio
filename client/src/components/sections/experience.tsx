@@ -3,8 +3,21 @@ import { Briefcase, Trophy, Star, Award } from "lucide-react";
 
 export function Experience() {
   return (
-    <div className="mb-32">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div className="mb-32 relative">
+      {/* Tech Doodles Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03] text-primary">
+        <svg 
+          className="absolute -right-20 top-0 w-[400px] h-[400px]" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="170" cy="180" r="4" fill="currentColor" />
+          <path d="M60,50 L140,60" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 2" />
+          <path d="M100,100 L140,130" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 2" />
+        </svg>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
         <div className="lg:col-span-7 space-y-8">
           <div className="flex items-center gap-6 mb-12">
             <h2 className="text-4xl font-black tracking-tight">Work <span className="text-primary">History</span></h2>

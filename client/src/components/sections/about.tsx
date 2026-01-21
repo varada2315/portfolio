@@ -3,8 +3,21 @@ import { Mic, Code, Lightbulb, Users } from "lucide-react";
 
 export function About() {
   return (
-    <div id="about" className="mb-32 scroll-mt-32">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div id="about" className="mb-32 scroll-mt-32 relative">
+      {/* Tech Doodles Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03] text-primary">
+        <svg 
+          className="absolute -left-20 top-0 w-[400px] h-[400px]" 
+          viewBox="0 0 200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="40" cy="40" r="15" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M80,30 L110,30 L110,60 L80,60 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M150,20 L170,40 M170,20 L150,40" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
         <div className="lg:col-span-8">
           <Block title="Biography" className="h-full p-12">
             <h2 className="text-4xl font-bold mb-8 tracking-tight">Crafting Products with Purpose ✨</h2>

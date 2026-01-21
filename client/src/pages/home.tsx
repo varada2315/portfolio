@@ -16,9 +16,9 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 pb-12 overflow-x-hidden">
       
       {/* Modern Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white/70 backdrop-blur-xl">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl">
+        <div className="container mx-auto px-6 h-20 flex items-center justify-between border-x border-b border-border bg-card">
+          <div className="flex items-center gap-4 px-4">
             <BuilderLogo src={techGirlLogoImg} />
             <div className="flex flex-col">
               <span className="font-display font-black text-xl tracking-tighter text-foreground">VARADA</span>

@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "Growitate Website",
-    category: "Web Development",
+    category: "Project Management",
     icon: <Globe className="w-8 h-8" />,
     link: "https://www.notion.so/Website-Development-at-Growitate-2ef615dccdb480a89476d80c463d5005",
     variant: "default" as const

@@ -54,14 +54,21 @@ export function Experience() {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <Block variant="primary" className="p-8 group">
-              <div className="flex items-center gap-4">
-                <Trophy className="w-6 h-6 text-primary" />
-                <div>
-                  <h3 className="text-lg font-bold">Research Paper</h3>
-                  <p className="text-[10px] font-bold opacity-40 uppercase">Journal • 2024</p>
+            <Block variant="primary" className="p-8 group" asChild>
+              <a 
+                href="/attached_assets/22UET056_DKTE_ResearchPaper_1769064073662.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <div className="flex items-center gap-4">
+                  <Trophy className="w-6 h-6 text-primary" />
+                  <div>
+                    <h3 className="text-lg font-bold">Research Paper</h3>
+                    <p className="text-[10px] font-bold opacity-40 uppercase">Journal • 2025</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </Block>
 
             <Block variant="secondary" className="p-8 group">

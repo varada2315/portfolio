@@ -10,11 +10,10 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      {/* Fallback for attached assets */}
       <Route path="/attached_assets/:filename">
         {(params) => {
-          // Use a direct anchor tag or window.open for static assets to avoid router loops
-          const url = `/attached_assets/${params.filename}`;
-          window.location.replace(url);
+          window.location.replace(`/attached_assets/${params.filename}`);
           return null;
         }}
       </Route>
@@ -27,8 +26,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Router />
+        <div className="min-h-screen w-full bg-background">
+          <Router />
+          <Toaster />
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );

@@ -12,7 +12,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/attached_assets/:filename">
         {(params) => {
-          window.location.href = `/attached_assets/${params.filename}`;
+          // Use a direct anchor tag or window.open for static assets to avoid router loops
+          const url = `/attached_assets/${params.filename}`;
+          window.location.replace(url);
           return null;
         }}
       </Route>

@@ -59,7 +59,7 @@ export function Experience() {
                 href="/attached_assets/22UET056_DKTE_ResearchPaper_1769064073662.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="cursor-pointer"
+                className="cursor-pointer block"
               >
                 <div className="flex items-center gap-4">
                   <Trophy className="w-6 h-6 text-primary" />

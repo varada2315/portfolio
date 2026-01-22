@@ -10,6 +10,12 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/attached_assets/:filename">
+        {(params) => {
+          window.location.href = `/attached_assets/${params.filename}`;
+          return null;
+        }}
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );

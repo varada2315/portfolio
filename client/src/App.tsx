@@ -16,7 +16,7 @@ function Router() {
           return null;
         }}
       </Route>
-      <Route component={NotFound} />
+      <Route component={Home} />
     </Switch>
   );
 }

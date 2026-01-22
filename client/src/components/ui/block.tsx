@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
+import { Slot } from "@radix-ui/react-slot";
+
 interface BlockProps {
   children: ReactNode;
   className?: string;
@@ -9,6 +11,7 @@ interface BlockProps {
   title?: string;
   variant?: 'default' | 'primary' | 'secondary' | 'accent';
   bounce?: boolean;
+  asChild?: boolean;
 }
 
 export function Block({ 
@@ -17,14 +20,47 @@ export function Block({
   delay = 0, 
   title, 
   variant = 'default',
-  bounce = true
+  bounce = true,
+  asChild = false
 }: BlockProps) {
+  const Component = asChild ? Slot : motion.div;
   const variants = {
     default: "bg-white border-border shadow-sm",
     primary: "bg-primary/5 border-primary/20 shadow-sm",
     secondary: "bg-secondary/5 border-secondary/20 shadow-sm",
     accent: "bg-accent/20 border-accent/30 shadow-sm"
   };
+
+  const content = (
+    <>
+      {title && (
+        <div className="mb-4 flex items-center gap-2">
+          <div className="w-1 h-4 rounded-full bg-primary" />
+          <h3 className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground">
+            {title}
+          </h3>
+        </div>
+      )}
+      
+      <div className="flex-1 relative z-10">
+        {children}
+      </div>
+    </>
+  );
+
+  if (asChild) {
+    return (
+      <Component
+        className={cn(
+          "rounded-2xl border p-6 flex flex-col relative overflow-hidden transition-all duration-300",
+          variants[variant],
+          className
+        )}
+      >
+        {children}
+      </Component>
+    );
+  }
 
   return (
     <motion.div
@@ -39,18 +75,7 @@ export function Block({
         className
       )}
     >
-      {title && (
-        <div className="mb-4 flex items-center gap-2">
-          <div className="w-1 h-4 rounded-full bg-primary" />
-          <h3 className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground">
-            {title}
-          </h3>
-        </div>
-      )}
-      
-      <div className="flex-1 relative z-10">
-        {children}
-      </div>
+      {content}
     </motion.div>
   );
 }

@@ -53,7 +53,7 @@ export function Projects() {
       {/* Tech Doodles Background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03] text-primary">
         <svg 
-          className="absolute -left-20 bottom-0 w-[500px] h-[500px]" 
+          className="absolute -left-20 bottom-0 w-[500px] h-[500px] hologram-glow" 
           viewBox="0 0 200 200" 
           xmlns="http://www.w3.org/2000/svg"
         >

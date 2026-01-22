@@ -57,12 +57,13 @@ export function Hero() {
             </motion.div>
 
             <motion.h1 
-              className="text-6xl md:text-8xl font-display font-black text-foreground leading-[1.1] tracking-tight"
+              className="text-6xl md:text-8xl font-display font-black text-foreground leading-[1.1] tracking-tight relative"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
               Varada <br />
-              <span className="text-primary">Kumbhar</span>
+              <span className="text-primary hologram-glow pb-2">Kumbhar</span>
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
             </motion.h1>
           </div>
 

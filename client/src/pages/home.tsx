@@ -9,6 +9,8 @@ import { BuilderLogo } from "@/components/ui/builder-logo";
 import { motion } from "framer-motion";
 import headerLogoImg from "@assets/Untitled_design_(8)_1769012998999.png";
 
+import { Certifications } from "@/components/sections/certifications";
+
 export default function Home() {
   useLenis();
 
@@ -18,7 +20,7 @@ export default function Home() {
       <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03] dark:opacity-[0.05]">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="doodles" x="0" y="0" width="200" height="200" patternUnits="userSpaceOn some">
+            <pattern id="doodles" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
               <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
               <circle cx="80" cy="50" r="5" fill="none" stroke="currentColor" strokeWidth="1"/>
               <path d="M120 30 Q 140 10 160 30" fill="none" stroke="currentColor" strokeWidth="1"/>
@@ -44,10 +46,11 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="hidden md:flex items-center gap-10 text-xs font-bold uppercase tracking-widest opacity-60">
+          <div className="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-60">
             <a href="#" className="hover:text-primary transition-colors">Home</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
+            <a href="#certifications" className="hover:text-primary transition-colors">Certifications</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </div>
 
@@ -57,11 +60,12 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="container mx-auto px-6 pt-32 max-w-6xl">
+      <main className="container mx-auto px-6 pt-32 max-w-6xl relative z-10">
         <Hero />
         <About />
         <Skills />
         <Projects />
+        <Certifications />
         <Experience />
         <Contact />
       </main>

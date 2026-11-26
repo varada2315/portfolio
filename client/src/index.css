@@ -33,91 +33,105 @@
 }
 
 :root {
-  /* Holographic Purple & White Palette */
+  /* Premium Holographic Palette */
   --background: 270 30% 98%; 
   --foreground: 270 40% 10%;
 
   --card: 0 0% 100%;
   --card-foreground: 270 40% 10%;
 
-  --primary: 270 90% 65%; /* Vibrant Purple */
+  --primary: 270 90% 65%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 240 80% 60%; /* AI/Tech Indigo */
+  --secondary: 240 80% 60%;
   --secondary-foreground: 0 0% 100%;
 
-  --accent: 270 100% 90%; /* Soft Hologram Lavender */
+  --accent: 270 100% 90%;
   --accent-foreground: 270 40% 20%;
 
   --muted: 270 20% 96%;
   --muted-foreground: 270 15% 40%;
 
-  --border: 270 20% 92%;
-  --radius: 1rem;
+  --border: 270 20% 90%;
+  --radius: 1.25rem;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20 min-h-screen;
-    background: 
-      radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
-      radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-      linear-gradient(135deg, #ffffff 0%, #f3f0ff 100%);
-    background-attachment: fixed;
-    position: relative;
+  
+  html {
+    scroll-behavior: smooth;
   }
-  body::before {
+
+  body {
+    @apply font-sans antialiased text-foreground selection:bg-primary/20 min-h-screen bg-background;
+    background: 
+      radial-gradient(circle at 0% 0%, rgba(168, 85, 247, 0.12) 0%, transparent 35%),
+      radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 35%),
+      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+      linear-gradient(135deg, hsl(270 30% 98%) 0%, hsl(270 30% 95%) 100%);
+    background-attachment: fixed;
+  }
+
+  /* Grain Effect */
+  body::after {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: 
-      radial-gradient(circle at 2px 2px, rgba(168, 85, 247, 0.03) 1px, transparent 0);
-    background-size: 40px 40px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
     pointer-events: none;
-    z-index: -1;
+    z-index: 9999;
   }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight;
+    @apply font-display font-black tracking-tighter leading-tight;
   }
 }
 
 @layer utilities {
-  .glass-block {
-    @apply bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_0_rgba(168,85,247,0.05)];
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_40px_-12px_rgba(168,85,247,0.1)];
   }
   
-  .hologram-glow {
-    @apply relative overflow-hidden;
-  }
-  .hologram-glow::after {
-    content: "";
-    @apply absolute inset-0 opacity-20 pointer-events-none;
-    background: linear-gradient(
-      105deg,
-      transparent 20%,
-      rgba(168, 85, 247, 0.2) 40%,
-      rgba(99, 102, 241, 0.2) 60%,
-      transparent 80%
-    );
-    background-size: 200% 100%;
-    animation: hologram-shimmer 8s linear infinite;
+  .hologram-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto];
+    animation: shimmer 5s linear infinite;
   }
 
-  @keyframes hologram-shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  .block-shadow {
+  .premium-shadow {
     box-shadow: 
-      0 10px 30px -5px rgba(168, 85, 247, 0.08),
-      0 4px 6px -2px rgba(168, 85, 247, 0.04);
+      0 20px 50px -12px rgba(168, 85, 247, 0.12),
+      0 0 0 1px rgba(168, 85, 247, 0.05);
   }
 
-  .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-1;
+  .glow-on-hover:hover {
+    @apply shadow-[0_0_30px_rgba(168,85,247,0.15)];
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 5s linear infinite;
   }
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-all;
+}
+
